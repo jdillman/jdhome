@@ -4,7 +4,9 @@ import { Route, Link } from 'react-router-dom';
 import Urls from 'lib/urls';
 import ItemScreen from 'components/screens/ItemScreen';
 
+import 'css/common/base.css';
 import 'css/common/reset.css';
+import 'css/common/themes.css';
 import 'css/App.css';
 
 function HomeScreen() {

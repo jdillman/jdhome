@@ -8,7 +8,7 @@
 .app-footer {
   padding: 5px;
   color: #333;
-  background: lightblue;
+  background: var(--primary-bg);
   text-align: center;
 }
 

@@ -1,0 +1,11 @@
+.app,
+.default-theme {
+  --primary: #1240AB;
+  --primary-accent: #628AE7;
+  --primary-bg: #9CB3E7;
+  --secondary: #FFAA00;
+  --secondary-accent: #FFC85B;
+}
+
+/* 1240AB  214494  0B318A  628AE7  9CB3E7
+   FFAA00  DC9D1E  CF8A00  FFC85B  FFE0A3 */
