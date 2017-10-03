@@ -1,0 +1,21 @@
+{
+  "objective": [
+    "Senior Frontend Engineer with 10+ years experience building modern, feature rich web applications. I have experience as a team lead and individual contributor and am comfortable with both roles. I have a passion for coding and would love to work somewhere that allows me to continue to grow.",
+    "I’ve led multiple projects from concept to release and know the challenges involved with building large scale web applications. I’m a self starter and pride myself and the ability to quickly contribute."
+  ],
+  "skills": ["JavaScript", "React", "Node.js", "HTML5", "ES2015", "ES6+", "CSS3", "Redux"],
+  "jobs": [{
+    "company": "Plays.tv",
+    "city": "Redwood City",
+    "dateRange": "2016 to Present",
+    "position": {
+      "title": "Frontend Team Lead",
+      "tasks": [
+        "Led effort to build new Plays.tv client (video capture software) using ES6, Electron and React",
+        "HTML5 video editor allowing video clipping, bookmarks and automatic highlight reels"
+      ]
+    }
+  }, {
+    "company": "Raptr"
+  }]
+}

@@ -2,7 +2,7 @@
 .default-theme {
   --primary: #1240AB;
   --primary-accent: #628AE7;
-  --primary-bg: #9CB3E7;
+  --primary-bg: #fff;
   --secondary: #FFAA00;
   --secondary-accent: #FFC85B;
 }
