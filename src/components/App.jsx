@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
 import Urls from 'lib/urls';
-import ItemScreen from 'components/screens/ItemScreen';
 
 import resume from 'data/resume.json';
 
@@ -15,8 +14,26 @@ console.log(resume);
 function HomeScreen() {
   return (
     <div>
-      <p>Im a Front End Engineer from the bay area specialing in webapps.</p>
-      <a href={Urls.GITHUB}>Github</a>
+      <p>Hi, I'm Jonathan</p>
+      <a title="My github" href={Urls.GITHUB}>Github</a>
+      <a title="My github" href={Urls.LINKEDIN}>LinkedIn</a>
+      <article>Blah blah blah, opinion opinion opinion</article>
+    </div>
+  );
+}
+
+function AboutScreen() {
+  return (
+    <div>
+      About me. Husband, father, runner
+    </div>
+  );
+}
+
+function ResumeScreen() {
+  return (
+    <div>
+      { resume.objective }
     </div>
   );
 }
@@ -33,18 +50,11 @@ function App() {
           <Link to="/about">About</Link>
           <Link to="/resume">Resume</Link>
           <Link to="/portfolio">Portfolio</Link>
-          <Link to="/portfolio/react-multi-select">Multiselect</Link>
         </nav>
         <section className="main-content">
           <Route exact path="/" component={HomeScreen} />
-          <Route path="/item/:itemId" component={ItemScreen} />
-          <Route
-            path="/item"
-            exact
-            render={() => (
-              <span>No Item selected</span>
-            )}
-          />
+          <Route exact path="/about" component={AboutScreen} />
+          <Route path="/resume" component={ResumeScreen} />
         </section>
       </main>
       <footer className="app-footer">Footer</footer>
