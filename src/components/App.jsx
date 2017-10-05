@@ -33,7 +33,18 @@ function AboutScreen() {
 function ResumeScreen() {
   return (
     <div>
-      { resume.objective }
+      <h2>Jonathan Dillman</h2>
+      <ul>
+        <li>San Jose, CA</li>
+        <li>619-459-5447</li>
+        <li><a href={Urls.GITHUB}>github</a></li>
+        <li><a href="mailto:jdd619+resume@gmail.com">jdd619</a></li>
+      </ul>
+      <section>
+        <div className="column">
+          <p>{resume.objective}</p>
+        </div>
+      </section>
     </div>
   );
 }
