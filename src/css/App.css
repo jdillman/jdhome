@@ -5,7 +5,9 @@
 }
 
 .app-header {
-  padding: 30px;
+  padding: 15px;
+  box-shadow: 0 -1px 3px 3px rgba(34, 34, 34, .4);
+  z-index: 1;
 }
 
 .app-header h1 {
@@ -24,16 +26,21 @@
 }
 
 .app-main {
-  padding-top: 40px;
+  padding: 40px;
   background: lightyellow;
   flex: 1;
   display: flex;
   flex-direction: row;
 }
 
-.app-main .main-nav {
-  border-right: 1px solid #ccc;
+.app-main .column {
   min-width: 100px;
+}
+
+.app-main .column .main-nav {
+  box-shadow: 1px 2px 5px 0px rgba(34, 34, 34, .4);
+  padding: 20px;
+  border-radius: 3px;
 }
 
 .app-main .main-nav ul {
@@ -47,4 +54,5 @@
 
 .app-main .main-content {
   flex: 1;
+  margin: 0 20px;
 }

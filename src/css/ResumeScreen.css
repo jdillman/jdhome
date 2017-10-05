@@ -1,0 +1,14 @@
+.resume-header {
+  border-bottom: 1px solid #222;
+  margin-bottom: 20px;
+}
+
+.resume-header ul {
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+.resume-header li {
+  float: left;
+  margin-right: 15px;
+}

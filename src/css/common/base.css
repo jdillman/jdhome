@@ -1,7 +1,33 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+.header {
+  font-family: 'Roboto Slab', serif
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
 a {
   color: var(--primary);
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--primary-accent);
+}
+
+a.active {
+  font-weight: bold;
 }
