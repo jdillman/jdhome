@@ -14,7 +14,7 @@ console.log(resume);
 function HomeScreen() {
   return (
     <div>
-      <p>Hi, I'm Jonathan</p>
+      <p>Hi, Im Jonathan</p>
       <a title="My github" href={Urls.GITHUB}>Github</a>
       <a title="My github" href={Urls.LINKEDIN}>LinkedIn</a>
       <article>Blah blah blah, opinion opinion opinion</article>
