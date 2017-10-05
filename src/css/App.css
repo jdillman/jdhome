@@ -4,15 +4,27 @@
   flex-direction: column;
 }
 
-.app-header,
+.app-header {
+  padding: 30px;
+}
+
+.app-header h1 {
+  font-size: 32px;
+}
+
 .app-footer {
   padding: 5px;
+}
+
+.app-header,
+.app-footer {
   color: #333;
   background: var(--primary-bg);
   text-align: center;
 }
 
 .app-main {
+  padding-top: 40px;
   background: lightyellow;
   flex: 1;
   display: flex;
@@ -35,5 +47,4 @@
 
 .app-main .main-content {
   flex: 1;
-  margin: 5px;
 }

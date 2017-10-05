@@ -25,7 +25,7 @@ function HomeScreen() {
 function AboutScreen() {
   return (
     <div>
-      About me. Husband, father, runner
+      About me. Husband, father, geek, runner
     </div>
   );
 }
