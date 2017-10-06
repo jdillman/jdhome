@@ -1,25 +1,59 @@
 import React from 'react';
 import resume from 'data/resume.json';
+import Urls from 'lib/urls';
 
 import 'css/ResumeScreen.css';
 
-function ResumeScreen() {
-  return (
-    <div>
-      <section className="resume-header">
-        <h2>Jonathan Dillman</h2>
-        <ul>
-          <li>San Jose, CA</li>
-          <li>619-459-5447</li>
+import githubIcon from 'images/github.svg';
+import LinkedInIcon from 'images/linkedin.svg';
+
+class ResumeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showConfirm: true,
+    };
+  }
+
+  render() {
+    const skills = Object.keys(resume.skills).map((cat) => {
+      console.log(cat);
+      return (
+        <ul className={cat}>
+          { resume.skills[cat].map(skill => <li key={skill}>{skill}</li>) }
         </ul>
-      </section>
-      <section>
-        <div className="column">
-          <p>{resume.objective}</p>
-        </div>
-      </section>
-    </div>
-  );
+      );
+    });
+
+    return (
+      <div>
+        <section className="resume-header">
+          <h2>Jonathan Dillman</h2>
+          <div className="contact">
+            <span>San Jose, CA - </span>
+            <span>619-459-5447</span>
+          </div>
+          <div className="icons">
+            <a className="github" href={Urls.GITHUB}>
+              <img alt="" src={githubIcon} />
+            </a>
+            <a className="github" href={Urls.LINKEDIN}>
+              <img alt="" src={LinkedInIcon} />
+            </a>
+          </div>
+        </section>
+        <section className="resume-body">
+          <div>
+            <h3>Objective</h3>
+            <p>{resume.objective}</p>
+          </div>
+          <h3>Skills</h3>
+          { skills }
+        </section>
+      </div>
+    );
+  }
 }
 
 export default ResumeScreen;

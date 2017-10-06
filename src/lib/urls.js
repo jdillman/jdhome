@@ -1,5 +1,6 @@
 const Urls = {
-  GITHUB: 'https://github.com/jdillman/jdhome',
+  LINKEDIN: 'https://www.linkedin.com/in/jdillman/',
+  GITHUB: 'https://github.com/jdillman',
 };
 
 export default Urls;

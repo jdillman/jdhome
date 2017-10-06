@@ -27,6 +27,10 @@ function AboutScreen() {
   );
 }
 
+function Customizer() {
+  return null;
+}
+
 function App() {
   return (
     <div className="app">
@@ -48,6 +52,7 @@ function App() {
           <Route path="/resume" component={ResumeScreen} />
         </section>
       </main>
+      <Customizer />
       <footer className="app-footer">Footer</footer>
     </div>
   );

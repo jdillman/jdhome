@@ -1,14 +1,35 @@
 .resume-header {
   border-bottom: 1px solid #222;
   margin-bottom: 20px;
+  position: relative;
 }
 
-.resume-header ul {
-  overflow: hidden;
+.resume-header .contact {
   padding: 5px 0;
 }
 
-.resume-header li {
-  float: left;
-  margin-right: 15px;
+.resume-header .contact span:last-child {
+  font-weight: bold;
+}
+
+.resume-header .icons {
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+.resume-header .icons a {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+}
+
+.resume-header .icons img {
+  width: 100%;
+}
+
+.resume-body h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
