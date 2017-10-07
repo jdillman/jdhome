@@ -40,7 +40,7 @@ function App() {
       <main className="app-main">
         <section className="column">
           <nav className="main-nav">
-            <NavLink activeClassName="active" to="/">Home</NavLink>
+            <NavLink exact activeClassName="active" to="/">Home</NavLink>
             <NavLink activeClassName="active" to="/about">About</NavLink>
             <NavLink activeClassName="active" to="/resume">Resume</NavLink>
             <NavLink activeClassName="active" to="/portfolio">Portfolio</NavLink>

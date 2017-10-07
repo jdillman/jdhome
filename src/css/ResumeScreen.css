@@ -15,7 +15,7 @@
 .resume-header .icons {
   position: absolute;
   right: 0;
-  top: 12px;
+  bottom: 5px;
 }
 
 .resume-header .icons a {
@@ -25,11 +25,17 @@
   margin-right: 10px;
 }
 
-.resume-header .icons img {
+.resume-header .icons a img {
+  display: block;
   width: 100%;
+}
+
+.resume-body p {
+  margin-bottom: 20px;
 }
 
 .resume-body h3 {
   font-size: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }

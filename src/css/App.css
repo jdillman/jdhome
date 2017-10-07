@@ -2,24 +2,30 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  min-width: 480px;
+  color: var(--text-color);
+  background: var(--primary-bg);
 }
 
+.app a {
+  color: var(--link);
+}
+
+.app a:hover {
+  color: var(--hover);
+}
+
+/** App Header **/
 .app-header {
   padding: 10px;
   box-shadow: 0 -1px 3px 3px rgba(34, 34, 34, .4);
+  color: var(--primary-bg);
+  background: var(--link);
   z-index: 1;
+  text-align: center;
 }
 
 .app-footer {
   padding: 5px;
-}
-
-.app-header,
-.app-footer {
-  color: #333;
-  background: var(--primary-bg);
-  text-align: center;
 }
 
 .app-main {
@@ -28,7 +34,7 @@
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  max-width: 960px;
+  width: 880px;
   position: relative;
 }
 
@@ -39,6 +45,7 @@
 .app-main .main-nav {
   box-shadow: 1px 2px 5px 0px rgba(34, 34, 34, .4);
   padding: 20px;
+  margin-right: 25px;
 }
 
 .app-main .main-nav ul {
@@ -52,10 +59,12 @@
 
 .app-main .main-content {
   flex: 1;
-  margin: 0 20px;
 }
 
 @media only screen and (max-width: 880px)  {
+  .app-main {
+    width: auto;
+  }
   .app-main .main-content {
     margin-top: 10px;    
   }

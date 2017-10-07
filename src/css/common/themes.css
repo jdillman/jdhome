@@ -1,11 +1,12 @@
 .app,
 .default-theme {
-  --primary: #1240AB;
-  --primary-accent: #628AE7;
-  --primary-bg: #fff;
+  --link: #1240AB;
+  --hover: #628AE7;
+  --primary-bg: #f5f5f5;
+  
   --text-color: #333;
-  --secondary: #FFAA00;
-  --secondary-accent: #FFC85B;
+  --accent: #FFAA00;
+  --accent-hover: #FFC85B;
 }
 
 /* 1240AB  214494  0B318A  628AE7  9CB3E7

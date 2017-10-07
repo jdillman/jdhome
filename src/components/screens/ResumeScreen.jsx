@@ -17,22 +17,20 @@ class ResumeScreen extends React.Component {
   }
 
   render() {
-    const skills = Object.keys(resume.skills).map((cat) => {
-      console.log(cat);
-      return (
-        <ul className={cat}>
-          { resume.skills[cat].map(skill => <li key={skill}>{skill}</li>) }
-        </ul>
-      );
-    });
+    const skills = Object.keys(resume.skills).map(cat => (
+      <ul className={cat}>
+        { resume.skills[cat].map(skill => <li key={skill}>{skill}</li>) }
+      </ul>
+    ));
 
     return (
       <div>
         <section className="resume-header">
-          <h2>Jonathan Dillman</h2>
+          <h2><a title="Google doc resume" href={Urls.RESUME}>Jonathan Dillman</a></h2>
           <div className="contact">
             <span>San Jose, CA - </span>
-            <span>619-459-5447</span>
+            <span>619-459-5447 - </span>
+            <span><a href="mailto:jdd619@gmail.com">jdd619@gmail.com</a></span>
           </div>
           <div className="icons">
             <a className="github" href={Urls.GITHUB}>
@@ -44,7 +42,7 @@ class ResumeScreen extends React.Component {
           </div>
         </section>
         <section className="resume-body">
-          <div>
+          <div className>
             <h3>Objective</h3>
             <p>{resume.objective}</p>
           </div>

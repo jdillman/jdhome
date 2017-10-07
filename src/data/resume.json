@@ -1,23 +1,89 @@
 {
+  "author": {
+    "name": "Jonathan Dillman",
+    "location": "San Jose, CA",
+    "phone": "619-459-5447",
+    "email": "jdd619@gmail.com"
+  },
   "objective": [
     "Senior Frontend Engineer with 10+ years experience building modern, feature rich web applications. I have experience as a team lead and individual contributor and am comfortable with both roles. I have a passion for coding and would love to work somewhere that allows me to continue to grow.",
     "I’ve led multiple projects from concept to release and know the challenges involved with building large scale web applications. I’m a self starter and pride myself and the ability to quickly contribute."
   ],
   "skills": {
-    "tech": ["JavaScript", "React", "Node.js", "HTML5", "ES2015", "ES6+", "CSS3", "Redux"]
+    "primary": ["JavaScript", "React", "Node.js", "HTML5", "ES2015", "ES6+", "CSS3", "Redux"],
+    "secondary": ["Babel", "Webpack", "Electron", "Angular", "Git", "PHP", "SASS", "MySQL"],
+    "ally": ["i18n", "a11y", "508 compliance"],
+    "patterns": ["REST", "MVC", "SOA", "Observer and event driven design"],
+    "misc": ["Jira", "Bugzilla", "Trac", "Agile", "various scrum methodologies"]
   },
-  "jobs": [{
+  "experience": [{
     "company": "Plays.tv",
     "city": "Redwood City",
     "dateRange": "2016 to Present",
-    "position": {
+    "positions": [{
       "title": "Frontend Team Lead",
       "tasks": [
         "Led effort to build new Plays.tv client (video capture software) using ES6, Electron and React",
-        "HTML5 video editor allowing video clipping, bookmarks and automatic highlight reels"
+        "HTML5 video editor allowing video clipping, bookmarks and automatic highlight reels",
+        "Rebuilt our video component to improve performance and reduce initial buffering delay by 50%",
+        "Built our UI component library using React and SASS",
+        "Led team of 4 engineers. Responsible for career development, performance tracking and conflict resolution when needed."
       ]
-    }
+    }]
   }, {
-    "company": "Raptr"
+    "company": "Raptr Inc",
+    "city": "Mountain View",
+    "dateRange": "2011 to 2016",
+    "positions": [{
+      "title": "Frontend Team Lead",
+      "tasks": [
+        "Built our in house web framework including a module loader with dependency injector, reactive data bindings and a unique server implementation to stream page content quickly and efficiently.",
+        "Built a custom analytics tracker for click and mouse tracking, A/B testing and performance tracking",
+        "Supervised and mentored new hires as well as kept our documentation and setup guides up to date"
+      ]
+    }, {
+      "title": "Senior Frontend Engineer",
+      "tasks": [
+        "Created majority of pages on http://plays.tv and http://raptr.com",
+        "Lead a project to convert a 50k line JavaScript package from YUI to jQuery",
+        "Worked closely with product and design to bring business needs together with a clean workable UX"
+      ]
+    }]
+  }, {
+    "company": "Yahoo!",
+    "city": "Sunnyvale",
+    "dateRange": "2010 to 2011",
+    "positions": [{
+      "title": "Technical Yahoo",
+      "tasks": [
+        "Frontend engineer on http://games.yahoo.com , the #1 (at the time) online games portal with millions of unique visitors",
+        "Worked on converting landing and signup pages to Yahoos new web framework (Maple and YUI)",
+        "Frontend engineer on http://videos.yahoo.com"
+      ]
+    }]
+  }, {
+    "company": "Qualys",
+    "city": "Redwood Shores",
+    "dateRange": "2009 to 2010",
+    "positions": [{
+      "title": "Frontend Engineer",
+      "tasks": [
+        "Worked on cross-browser support and 508 compliance for QualysGuard",
+        "Created wireframes and mockups for new features and prototypes",
+        "Solved long standing issue with viewing large vulnerability reports on IE7 (ask me about this it was a fun bug to track down)"
+      ]
+    }]
+  }, {
+    "company": "DSI",
+    "city": "San Diego",
+    "dateRange": "2000 to 2008",
+    "positions": [{
+      "title": "Software Engineer",
+      "tasks": [
+        "Lead Engineer on www.mdsuite.com. An early example of a SASS medical billing suite still used today",
+        "Utilized vbscript, dhtml, htc’s and Microsoft.XMLHTTP to create a responsive ajax webapp using IE5",
+        "Mentored new hires and held monthly classes on .NET for other engineers"
+      ]
+    }]
   }]
 }
