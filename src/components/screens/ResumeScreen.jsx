@@ -1,3 +1,10 @@
+/**
+ * Resume screen
+ *
+ * Reads resume.json to display a simple html resume
+ *
+ */
+
 import React from 'react';
 import resume from 'data/resume.json';
 import Urls from 'lib/urls';
@@ -12,46 +19,88 @@ class ResumeScreen extends React.Component {
     super(props);
 
     this.state = {
-      showConfirm: true,
+      showingAnnotation: true,
     };
   }
 
   render() {
-    const skills = Object.keys(resume.skills).map(cat => (
-      <ul className={cat}>
-        { resume.skills[cat].map(skill => <li key={skill}>{skill}</li>) }
-      </ul>
-    ));
+    const { author, objective, skills, experience } = resume;
 
     return (
       <div>
         <section className="resume-header">
-          <h2><a title="Google doc resume" href={Urls.RESUME}>Jonathan Dillman</a></h2>
-          <div className="contact">
-            <span>San Jose, CA - </span>
-            <span>619-459-5447 - </span>
-            <span><a href="mailto:jdd619@gmail.com">jdd619@gmail.com</a></span>
-          </div>
-          <div className="icons">
-            <a className="github" href={Urls.GITHUB}>
-              <img alt="" src={githubIcon} />
-            </a>
-            <a className="github" href={Urls.LINKEDIN}>
-              <img alt="" src={LinkedInIcon} />
-            </a>
-          </div>
+          <ResumeContact author={author} />
         </section>
         <section className="resume-body">
-          <div className>
+          <div className="resume-section">
             <h3>Objective</h3>
-            <p>{resume.objective}</p>
+            <p className="text">{objective}</p>
           </div>
-          <h3>Skills</h3>
-          { skills }
+          <div className="resume-section">
+            <h3>Skills</h3>
+            { Object.keys(skills).map(cat => (
+              <ul key={cat} className={`skill-list ${cat}`}>
+                { skills[cat].map(item => <li key={item}>{item}</li>) }
+              </ul>
+            )) }
+          </div>
+          <div className="resume-section">
+            <h3>Experience</h3>
+            <ResumeJobs jobs={experience} />
+          </div>
         </section>
       </div>
     );
   }
+}
+
+function ResumeJobs(props) {
+  const jobs = props.jobs || [];
+
+  return jobs.map(job => (
+    <div key={job.company} className="job">
+      <span>{job.company}</span>
+      <span>, {job.city}</span>
+      <span>{job.dateRange}</span>
+      { job.positions.map(position => (
+        <div key={position.title} className="position">
+          <h3>{position.title}</h3>
+          <ul>
+            {
+              position.tasks.map(task => (
+                <li key={task}><p>{task}</p></li>
+              ))
+            }
+          </ul>
+        </div>
+      ))
+      }
+    </div>
+  ));
+}
+
+function ResumeContact(props) {
+  const contact = props.author;
+  const emailLink = `mailto:${contact.email}`;
+
+  return (
+    <div className="resume-contact">
+      <h2><a title="Google doc resume" href={Urls.RESUME}>{contact.name}</a></h2>
+      <div className="contact">
+        <span>{contact.name} - </span>
+        <span>{contact.phone} - </span>
+        <span><a href={emailLink}>{contact.email}</a></span>
+      </div>
+      <div className="icons">
+        <a className="github" href={Urls.GITHUB}>
+          <img alt="" src={githubIcon} />
+        </a>
+        <a className="github" href={Urls.LINKEDIN}>
+          <img alt="" src={LinkedInIcon} />
+        </a>
+      </div>
+    </div>
+  );
 }
 
 export default ResumeScreen;

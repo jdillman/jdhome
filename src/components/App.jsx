@@ -38,7 +38,7 @@ function App() {
         <h1 className="header">JonathanDillman.com</h1>
       </header>
       <main className="app-main">
-        <section className="column">
+        <section>
           <nav className="main-nav">
             <NavLink exact activeClassName="active" to="/">Home</NavLink>
             <NavLink activeClassName="active" to="/about">About</NavLink>
