@@ -1,6 +1,6 @@
 .resume-header {
   border-bottom: 1px solid #222;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -30,20 +30,83 @@
   width: 100%;
 }
 
-.resume-body .text {
-  margin-bottom: 20px;
+.resume-section {
+  margin-bottom: 25px;
+}
+
+.resume-section .content {
+  margin-left: 30px;
+}
+
+.resume-body h3 span {
+  font-weight: bolder;
 }
 
 .resume-body h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 15px;
+  
 }
 
-.resume-body .skill-list {
+/* Skills */
+.resume-body .list {
   display: block;
+  overflow: hidden;
+  margin: 0 0 5px 25px;
 }
 
-.resume-body .skill-list li {
+.resume-body .list:before {
+  content: '•';
+  margin-right: 10px;
   float: left;
+  font-size: 18px;
+}
+
+.resume-body .list li {
+  float: left;
+  margin-right: 5px;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.resume-body .skill-list li:after {
+  content: ',';
+}
+
+.resume-body .skill-list li:last-child:after {
+  display: none;
+}
+
+/* Jobs */
+.resume-body h3 {
+  font-family: Arial;
+}
+.resume-body .job {
+  margin-bottom: 30px;
+}
+
+.resume-body .job .company {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.resume-body .job .company:after {
+  content: ',';
+  margin-right: 5px;
+}
+
+.resume-body .job .date {
+  float: right;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.resume-body .job .position {
+  margin: 5px 0 0 0;
+}
+
+.resume-body .job .position > p {
+  font-weight: bold;
+  margin: 10px 0 10px 10px;
+  font-size: 18px;
 }

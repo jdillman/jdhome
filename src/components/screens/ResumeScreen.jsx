@@ -14,44 +14,36 @@ import 'css/ResumeScreen.css';
 import githubIcon from 'images/github.svg';
 import LinkedInIcon from 'images/linkedin.svg';
 
-class ResumeScreen extends React.Component {
-  constructor(props) {
-    super(props);
+function ResumeScreen() {
+  const { author, objective, skills, experience } = resume;
 
-    this.state = {
-      showingAnnotation: true,
-    };
-  }
-
-  render() {
-    const { author, objective, skills, experience } = resume;
-
-    return (
-      <div>
-        <section className="resume-header">
-          <ResumeContact author={author} />
-        </section>
-        <section className="resume-body">
-          <div className="resume-section">
-            <h3>Objective</h3>
-            <p className="text">{objective}</p>
-          </div>
-          <div className="resume-section">
-            <h3>Skills</h3>
-            { Object.keys(skills).map(cat => (
-              <ul key={cat} className={`skill-list ${cat}`}>
-                { skills[cat].map(item => <li key={item}>{item}</li>) }
-              </ul>
-            )) }
-          </div>
-          <div className="resume-section">
-            <h3>Experience</h3>
+  return (
+    <div>
+      <section className="resume-header">
+        <ResumeContact author={author} />
+      </section>
+      <section className="resume-body">
+        <div className="resume-section">
+          <h3><span>O</span>bjective</h3>
+          <p className="content text">{objective}</p>
+        </div>
+        <div className="resume-section">
+          <h3><span>S</span>kills</h3>
+          { Object.keys(skills).map(cat => (
+            <ul key={cat} className={`list skill-list ${cat}`}>
+              { skills[cat].map(item => <li key={item}>{item}</li>) }
+            </ul>
+          )) }
+        </div>
+        <div className="resume-section">
+          <h3><span>E</span>xperience</h3>
+          <div className="content">
             <ResumeJobs jobs={experience} />
           </div>
-        </section>
-      </div>
-    );
-  }
+        </div>
+      </section>
+    </div>
+  );
 }
 
 function ResumeJobs(props) {
@@ -59,16 +51,16 @@ function ResumeJobs(props) {
 
   return jobs.map(job => (
     <div key={job.company} className="job">
-      <span>{job.company}</span>
-      <span>, {job.city}</span>
-      <span>{job.dateRange}</span>
+      <span className="company">{job.company}</span>
+      <span>{job.city}</span>
+      <span className="date">{job.dateRange}</span>
       { job.positions.map(position => (
         <div key={position.title} className="position">
-          <h3>{position.title}</h3>
+          <p>{position.title}</p>
           <ul>
             {
               position.tasks.map(task => (
-                <li key={task}><p>{task}</p></li>
+                <li className="list" key={task}><p>{task}</p></li>
               ))
             }
           </ul>
@@ -87,7 +79,7 @@ function ResumeContact(props) {
     <div className="resume-contact">
       <h2><a title="Google doc resume" href={Urls.RESUME}>{contact.name}</a></h2>
       <div className="contact">
-        <span>{contact.name} - </span>
+        <span>{contact.location} - </span>
         <span>{contact.phone} - </span>
         <span><a href={emailLink}>{contact.email}</a></span>
       </div>
