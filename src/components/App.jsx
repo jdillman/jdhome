@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import ResumeScreen from 'components/screens/ResumeScreen';
 
 import 'css/common/reset.css';
@@ -15,7 +14,7 @@ function App() {
       </header>
       <main className="app-main">
         <section className="main-content">
-          <Route path="/" component={ResumeScreen} />
+          <ResumeScreen />
         </section>
       </main>
     </div>
