@@ -34,4 +34,5 @@
   margin: 0 auto;
   position: relative;
   min-width: 414px;
+  max-width: 720px;
 }
