@@ -25,7 +25,9 @@ function ResumeScreen() {
       <section className="resume-body">
         <div className="resume-section">
           <h3><span>O</span>bjective</h3>
-          <p className="content text">{objective}</p>
+          { objective.map(text => (
+            <p className="content text">{text}</p>
+          )) }
         </div>
         <div className="resume-section">
           <h3><span>S</span>kills</h3>

@@ -33,5 +33,5 @@
   flex: 1;
   margin: 0 auto;
   position: relative;
-  width: 920px;
+  min-width: 414px;
 }

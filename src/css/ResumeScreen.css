@@ -38,6 +38,10 @@
   margin-left: 30px;
 }
 
+.resume-section .content:last-child {
+  margin-top: 20px;
+}
+
 .resume-body h3 span {
   font-weight: bolder;
 }
